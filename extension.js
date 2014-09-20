@@ -40,7 +40,7 @@
                 if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                 if (!bot.commands.executable(this.rank, chat)) return void (0);
                 else {
-                    API.sendChat("/me Bacon!!!");
+                    API.sendChat("/me coming soon!");
                 }
             }
         };
@@ -57,6 +57,43 @@
                 }
             }
         }
+        
+        bot.commands.lotteryActive = {
+            command: 'lottery active',
+            rank: 'bouncer',
+            type: 'exact',
+            functionality: function (chat, cmd) {
+             if (this.type == 'exact' && chat.message.length ~=cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                    API.sendChat("/me Lottery mode Active is now Enabled!");
+            }
+        }
+        
+        bot.commands.lotteryAll = {
+            command: 'lottery all',
+            rank: 'bouncer',
+            type: 'exact',
+            functionality: function (chat, cmd) {
+             if (this.type == 'exact' && chat.message.length ~=cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                    API.sendChat("/me Lottery mode All is now Enabled!");
+            }
+        }
+        
+        bot.commands.lotteryActive = {
+            command: 'lottery disable',
+            rank: 'bouncer',
+            type: 'exact',
+            functionality: function (chat, cmd) {
+             if (this.type == 'exact' && chat.message.length ~=cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                    API.sendChat("/me Lottery mode is now Disabled!");
+            }
+        }
+        
 
         //Load the chat package again to account for any changes
         bot.loadChat();
